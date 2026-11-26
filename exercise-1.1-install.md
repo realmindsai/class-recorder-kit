@@ -8,7 +8,13 @@ Dennis gives you two items: a file called `class-recorder.js` and a folder calle
      `New-Item -ItemType Directory -Force "$env:USERPROFILE\.config\opencode\plugins"`
 2. Tell git your real name, the way you want Dennis to see it:
    `git config --global user.name "Your Name"`
-3. Close OpenCode and open it again.
+3. Close OpenCode. Make a folder for the class and start OpenCode from inside it. OpenCode works in whatever folder your terminal is in, and can read and change the files there, so always start it from this folder.
+   - macOS and Linux:
+     `mkdir -p ~/class && cd ~/class && opencode`
+   - Windows: open PowerShell normally, **not** "Run as administrator", then run:
+     `New-Item -ItemType Directory -Force "$env:USERPROFILE\class"; cd "$env:USERPROFILE\class"; opencode`
+
+   If your prompt shows `C:\Windows\System32`, you are in the wrong folder. Run the `cd` part first.
 4. Ask OpenCode anything, for example "hello".
 
 **Done when:** Dennis sees your name in the console.
