@@ -28,7 +28,29 @@ Tell git your name, the way you want Dennis to see it:
 git config --global user.name "Your Name"
 ```
 
-Close OpenCode, open it again, and type `hello`.
+## 4. Start OpenCode in your class folder
+
+Close OpenCode. OpenCode works in whatever folder your terminal is in, and can read and change the files there. Make a folder for the class and always start OpenCode from inside it.
+
+macOS and Linux:
+
+```
+mkdir -p ~/class
+cd ~/class
+opencode
+```
+
+Windows: open PowerShell normally, **not** "Run as administrator", then run:
+
+```
+New-Item -ItemType Directory -Force "$env:USERPROFILE\class"
+cd "$env:USERPROFILE\class"
+opencode
+```
+
+If your prompt shows `C:\Windows\System32`, you are in the wrong folder. Run the `cd` line first.
+
+Type `hello`.
 
 **Done when:** Dennis sees your name.
 
